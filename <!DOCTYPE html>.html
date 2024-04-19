@@ -21,22 +21,23 @@
   h1 {
     margin-bottom: 20px;
   }
-  .button {
-    background-color: #4C5B9C;
-    border: none;
-    color: white;
-    padding: 15px 30px;
-    padding-left: 50px; /* Increased left padding to accommodate image */
-    text-align: left; /* Align text to the left */
-    text-decoration: none;
-    display: inline-flex; /* Changed to inline-flex for better alignment */
-    align-items: center; /* Center items vertically */
-    font-size: 16px;
-    margin: 10px;
-    border-radius: 10px;
-    width: 180px; /* Adjusted width to give more space */
-    overflow: hidden; /* Prevents content from spilling out */
-  }
+  .button, .button a {
+  background-color: #4C5B9C;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  padding-left: 50px; /* Increased left padding to accommodate image */
+  text-align: left; /* Align text to the left */
+  text-decoration: none;
+  display: inline-flex; /* Changed to inline-flex for better alignment */
+  align-items: center; /* Center items vertically */
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 180px; /* Adjusted width to give more space */
+  overflow: hidden; /* Prevents content from spilling out */
+  justify-content: flex-start; /* Added for horizontal alignment */
+}
   .button img {
     margin-right: 10px;
     max-height: 30px; /* Limit the height to not exceed the button */
@@ -45,6 +46,10 @@
     width: auto; /* Maintain aspect ratio */
     margin-left: -35px; /* Adjusts the image position to the left */
   }
+  
+  a.button {
+  text-decoration: none; /* This ensures that the anchor text is not underlined */
+}
 </style>
 </head>
 <body>
@@ -54,13 +59,13 @@
       <img src="Front-end files/budget_icon.png" alt="Budget Icon"> Budget
     </button>
     <button class="button" onclick="location.href='expenses.html'">
-      <img src="expenses_icon.png" alt="Expenses Icon"> Expenses
+      <img src="Front-end files/expenses_icon.png" alt="Expenses Icon"> Expenses
     </button>
-    <button class="button" onclick="location.href='tips.html'">
-      <img src="tips_icon.png" alt="Tips Icon"> Tips
-    </button>
+    <a href="ButtonFiles/tips_page.html" class="button">
+      <img src="Front-end files/tips_icon.png" alt="Tips Icon"> Tips
+    </a>
     <button class="button" onclick="location.href='help.html'">
-      <img src="help_icon.png" alt="Help Icon"> Help
+      <img src="Front-end files/help_icon.png" alt="Help Icon"> Help
     </button>
   </div>
 </body>
